@@ -74,7 +74,7 @@ func New(opts ...Option) *Graceful {
 	graceful := &Graceful{
 		running:  0,
 		listen:   DefaultListen,
-		logger:   defaultLog,
+		logger:   nil,
 		services: make(map[string]*service),
 	}
 	for _, opt := range opts {
